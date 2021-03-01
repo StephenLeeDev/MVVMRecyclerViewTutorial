@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.mvvmrecyclerviewtutorial.DB.SubscriberModel" />
+            type="com.example.mvvmrecyclerviewtutorial.DB.SubscriberViewModel" />
     </data>
 <LinearLayout
     android:layout_width="match_parent"
@@ -53,6 +53,7 @@
             android:text="@={viewModel.buttonSaveOrUpdate}"
             android:layout_weight="1"
             android:layout_margin="8dp"
+            android:onClick="@={()->viewModel.saveOrUpdate}"
             />
 
         <Button
@@ -61,6 +62,7 @@
             android:text="@={viewModel.buttonDeleteAll}"
             android:layout_weight="1"
             android:layout_margin="8dp"
+            android:onClick="@={()->viewModel.clearAllOrUpdate()}"
             />
 
     </LinearLayout>
